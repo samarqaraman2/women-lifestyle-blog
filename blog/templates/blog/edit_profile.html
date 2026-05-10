@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_edit_profile.css' %}">
+{% endblock %}
+
+{% block title %}تعديل الملف الشخصي{% endblock %}
+{% block content %}
+<div class="edit-profile-container">
+    <h2>✏️ تعديل صورتكِ الشخصية</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-save">💾 حفظ التغييرات</button>
+    </form>
+</div>
+{% endblock %}

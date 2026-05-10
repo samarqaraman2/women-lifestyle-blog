@@ -1,0 +1,167 @@
+/* style_base.css */
+
+/* ✅ إعداد الخطوط والتهيئة العامة */
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #fffdfd;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto; /* يملأ المساحة المتبقية */
+}
+
+.main-footer {
+  flex-shrink: 0;
+}
+
+/* ✅ الهيدر */
+.main-header {
+  background-color: #ffe4ec;
+  box-shadow: 0 4px 6px rgba(214, 51, 132, 0.1);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ اللوجو */
+.logo-image {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ✅ روابط التنقل */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a,
+.logout-btn {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover,
+.logout-btn:hover {
+  background-color: #fcd1e3;
+}
+
+/* ✅ زر تسجيل الخروج */
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ✅ فورم البحث */
+.search-form {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.search-button {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #c2185b;
+}
+
+/* ✅ زر قائمة الموبايل */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #d63384;
+}
+
+/* ✅ الفوتر */
+/* footer styles */
+.main-footer {
+  background-color: #ffe4ec; /* وردي ناعم */
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  color: #a63673;
+  font-weight: 600;
+  border-top: 1px solid #f8c6dc;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -3px 6px rgba(214, 51, 132, 0.1);
+}
+
+
+/* ✅ ريسبونسف */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff0f5;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .search-form {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}

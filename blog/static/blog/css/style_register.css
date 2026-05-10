@@ -1,0 +1,93 @@
+/* blog/static/blog/css/style_register.css */
+
+.register-form-container {
+  max-width: 450px;
+  margin: 50px auto 80px auto;
+  background-color: #fff0f5;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.2);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.register-form-container h2 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.register-switch {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #9c216d;
+}
+
+.register-switch a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-switch a:hover {
+  text-decoration: underline;
+}
+
+.register-form-container form input,
+.register-form-container form select,
+.register-form-container form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: 1.5px solid #d49bc8;
+  font-family: "Cairo", sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.register-form-container form input:focus,
+.register-form-container form select:focus,
+.register-form-container form textarea:focus {
+  border-color: #a43a88;
+}
+
+.register-form-container button.btn-save {
+  width: 100%;
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form-container button.btn-save:hover {
+  background-color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-form-container {
+    max-width: 90%;
+    padding: 25px 20px;
+    margin: 20px auto 60px auto;
+  }
+
+  .register-form-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .register-form-container button.btn-save {
+    font-size: 0.95rem;
+    padding: 11px 0;
+  }
+}

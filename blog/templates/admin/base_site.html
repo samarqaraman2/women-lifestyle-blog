@@ -1,0 +1,25 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'blog/admin/custom_admin.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="custom-wrapper">
+  <aside class="sidebar">
+    <div class="brand">💖 مدونتي</div>
+    <ul class="nav">
+      <li><a href="{% url 'admin:index' %}"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
+      <li><a href="{% url 'admin:blog_article_changelist' %}"><i class="fa fa-pencil-alt"></i> المقالات</a></li>
+      <li><a href="{% url 'admin:blog_comment_changelist' %}"><i class="fa fa-comments"></i> التعليقات</a></li>
+      <li><a href="{% url 'admin:auth_user_changelist' %}"><i class="fa fa-users"></i> المستخدمون</a></li>
+    </ul>
+  </aside>
+  <main class="main-content">
+    {{ block.super }}
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block title %}تسجيل الدخول{% endblock %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="login-form-container">
+    <h2>👋 أهلًا برجعتكِ</h2>
+
+    <p class="register-switch">
+        ما عندكِ حساب؟ <a href="{% url 'register' %}">سجّلي من هنا</a> 🌸
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-save">تسجيل الدخول</button>
+    </form>
+</div>
+{% endblock %}

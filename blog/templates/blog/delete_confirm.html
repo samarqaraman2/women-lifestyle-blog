@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_delete_article.css' %}">
+{% endblock %}
+
+{% block title %}تأكيد حذف المقال{% endblock %}
+
+{% block content %}
+<div class="delete-confirm">
+    <h2>⚠️ هل أنتِ متأكدة من حذف هذا المقال؟</h2>
+    <p><strong>{{ article.title }}</strong></p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn-danger">🗑️ نعم، احذفيه</button>
+        <a href="{% url 'article_detail' article.pk %}" class="btn-back">🔙 رجوع</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_register.css' %}">
+{% endblock %}
+
+{% block title %}تسجيل جديد{% endblock %}
+
+{% block content %}
+<div class="register-form-container">
+    <h2>✨ إنشاء حساب جديد</h2>
+
+    <p class="register-switch">
+        عندكِ حساب بالفعل؟ <a href="{% url 'login' %}">سجّلي الدخول من هنا</a> 👈
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-save">التسجيل 💕</button>
+    </form>
+</div>
+{% endblock %}

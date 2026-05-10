@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_about.css' %}">
+{% endblock %}
+
+{% block title %}من نحن{% endblock %}
+
+{% block content %}
+<section class="about">
+    <div class="about-wrapper">
+     <img src="{% static '/blog/images/about-img.jpg' %}" alt="من نحن" class="about-image"/>
+        <div class="about-text">
+            <h1>من نحن؟ 💕</h1>
+            <p>
+                مدونتنا النسائية تم إنشاؤها من قلب الحياة! 👒<br>
+                نهتم بكل تفاصيل حياة البنت: من الأمومة، السفر، الأزياء، المشاعر، التكنولوجيا، وحتى العمل!
+                الهدف؟ إنكِ تلاقي مكانكِ هنا، وتكوني جزء من هذا العالم الناعم والداعم.
+            </p>
+        </div>
+        
+    </div>
+</section>
+{% endblock %}

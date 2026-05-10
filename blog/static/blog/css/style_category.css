@@ -1,0 +1,78 @@
+/* blog/static/blog/css/style_category.css */
+
+.container {
+  max-width: 900px;
+  margin: 30px auto 60px auto;
+  padding: 0 15px;
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+}
+
+.container h2 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 1.6rem; /* قللنا الحجم */
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.card {
+  background-color: #fff0f5;
+  border-radius: 16px;
+  padding: 16px 20px; /* قللنا البادينغ */
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.15);
+  transition: box-shadow 0.3s ease;
+  text-align: right;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(214, 51, 132, 0.3);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem; /* قللنا الحجم */
+  color: #a32970;
+}
+
+.card h3 a {
+  color: #a32970;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card h3 a:hover {
+  color: #d63384;
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 0.9rem; /* قللنا الحجم */
+  line-height: 1.4;
+  margin-top: 8px;
+  color: #5a4a5a;
+}
+
+/* رسالة "لا توجد مقالات" */
+.container p {
+  text-align: center;
+  font-size: 1rem; /* قللنا الحجم */
+  color: #9c216d;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .container h2 {
+    font-size: 1.4rem; /* قللنا الحجم */
+  }
+
+  .card h3 {
+    font-size: 1.1rem; /* قللنا الحجم */
+  }
+}

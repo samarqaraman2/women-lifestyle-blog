@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_home.css' %}">
+{% endblock %}
+
+
+{% block title %} مدونتكِ {% endblock %}
+
+{% block content %}
+<div class="home-hero">
+    <div class="hero-text">
+        <h1>مرحباً بكِ في مدونتكِ النسائية 💕</h1>
+        <p>مساحتكِ الحرة لتحكي فيها عن الأمومة، التكنولوجيا، السفر، المشاعر، وكل شيء يخصكِ!</p>
+    </div>
+    <img src="{% static '/blog/images/weman.jpg' %}" alt="فتاة تقرأ" class="hero-image">
+    
+</div>
+
+
+<section class="categories-section">
+    <h2>✨ أقسام المدونة</h2>
+    <div class="category-list">
+        <span><a href="{% url 'category_articles' 'أمومة' %}">👩‍👧‍👦 الأمومة</a></span>
+        <span><a href="{% url 'category_articles' 'البيت' %}">🏡 البيت</a></span>
+        <span><a href="{% url 'category_articles' 'تكنولوجيا' %}">💻 التكنولوجيا</a></span>
+        <span><a href="{% url 'category_articles' 'مشاعر وعمل' %}">🎨 المشاعر والعمل</a></span>
+        <span><a href="{% url 'category_articles' 'أزياء' %}">👗 الأزياء</a></span>
+        <span><a href="{% url 'category_articles' 'سفر' %}">🌍 السفر</a></span>
+    </div>
+</section>
+
+
+<section class="latest-posts">
+    <h2>📝 أحدث المقالات</h2>
+    <div class="grid">
+        {% for article in articles %}
+       <div class="card fade-in">
+            <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            <h3>📝 {{ article.title }}</h3>
+            <p>{{ article.content|truncatewords:20 }}</p>
+            <p class="category-tag">📌 التصنيف: {{ article.category }}</p>
+            <a href="{% url 'article_detail' article.id %}">📖 اقـرئي المزيد</a>
+        </div>
+
+        {% empty %}
+        <p>لا توجد مقالات بعد.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

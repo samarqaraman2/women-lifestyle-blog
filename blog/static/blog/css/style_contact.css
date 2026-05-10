@@ -1,0 +1,81 @@
+/* blog/static/blog/css/style_contact.css */
+
+.contact-container {
+  max-width: 800px;
+  margin: 40px auto 60px auto;
+  background-color: #fff0f5;
+  border-radius: 16px;
+  padding: 25px 28px;
+  box-shadow: 0 4px 14px rgba(214, 51, 132, 0.15);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+  text-align: right;
+}
+
+.contact-container h2 {
+  color: #d63384;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  color: #6e4a66;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d49bc8;
+  font-family: "Cairo", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a43a88;
+}
+
+.contact-form button {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 25px 15px 50px 15px;
+    padding: 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro-text {
+    font-size: 0.9rem;
+  }
+}

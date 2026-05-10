@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_delete_comment.css' %}">
+{% endblock %}
+
+{% block title %}تأكيد حذف التعليق{% endblock %}
+
+{% block content %}
+<div class="delete-popup">
+    <div class="popup-box">
+        <h2>⚠️ هل أنتِ متأكدة من حذف هذا التعليق؟</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="confirm-delete">نعم، احذفيه</button>
+            <a href="{% url 'article_detail' comment.article.pk %}" class="cancel-delete">إلغاء</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

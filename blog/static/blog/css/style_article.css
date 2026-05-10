@@ -1,0 +1,234 @@
+/* blog/static/blog/css/style_article.css */
+
+/* الحاوية الرئيسية */
+.article-detail {
+  max-width: 900px;
+  margin: 40px auto 80px auto;
+  padding: 20px 25px;
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+  text-align: right;
+  background-color: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.15);
+}
+
+/* أزرار التعديل والحذف */
+.article-actions {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.icon-btn {
+  font-size: 1.4rem;
+  margin-left: 15px;
+  color: #d63384;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-btn:hover {
+  color: #a32970;
+}
+
+/* عنوان المقال */
+h1 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* تصنيف المقال */
+.article-category {
+  font-size: 1.1rem;
+  color: #9c216d;
+  margin-bottom: 30px;
+}
+
+/* صورة المقال */
+.image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.article-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(214, 51, 132, 0.25);
+}
+
+/* محتوى المقال */
+.article-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #5a4a5a;
+}
+
+/* معلومات إضافية */
+.article-info {
+  font-size: 1rem;
+  color: #6c5575;
+  margin-bottom: 50px;
+}
+
+/* رابط بروفايل الكاتب */
+.btn-profile-link {
+  color: #d63384;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #d63384;
+  padding: 7px 18px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-profile-link:hover {
+  background-color: #d63384;
+  color: #fff;
+}
+
+/* قسم التعليقات */
+.comments-section {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #d63384;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+/* صندوق التعليق */
+.comment-box {
+  background-color: #fde7f0;
+  border-radius: 20px;
+  padding: 18px 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 16px rgba(214, 51, 132, 0.15);
+  position: relative;
+  text-align: right;
+}
+
+/* رأس التعليق */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* اسم الكاتب */
+.comment-author {
+  font-weight: 700;
+  color: #a32970;
+  font-size: 1.05rem;
+}
+
+/* أزرار تعديل وحذف */
+.comment-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.comment-actions .icon-btn {
+  font-size: 1.2rem;
+  color: #d63384;
+}
+
+.comment-actions .icon-btn:hover {
+  color: #a32970;
+}
+
+/* نص التعليق */
+.comment-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5a4a5a;
+  white-space: pre-wrap;
+}
+
+/* رسالة لا يوجد تعليقات */
+.no-comments {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #9c216d;
+  margin-top: 25px;
+}
+
+/* عنوان إضافة تعليق */
+.add-comment-title {
+  font-size: 1.4rem;
+  color: #d63384;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* فورم إضافة التعليق */
+.comment-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.comment-form textarea {
+  width: 100%;
+  min-height: 100px;
+  border-radius: 15px;
+  border: 1.5px solid #d49bc8;
+  padding: 12px 18px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.1rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+  border-color: #a43a88;
+}
+
+/* زر الإرسال */
+.btn-submit {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.btn-submit:hover {
+  background-color: #a72961;
+}
+
+/* استجابة الأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .article-detail,
+  .comments-section {
+    margin: 20px 10px 60px 10px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+}

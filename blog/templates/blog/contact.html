@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_contact.css' %}">
+{% endblock %}
+
+{% block title %}تواصلي معنا{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <h2>تواصلي معنا 💌</h2>
+    <p class="intro-text">إذا عندكِ أي استفسار، اقتراح، أو بس حابة تحكي، احنا دايمًا جاهزين نسمعكِ 🌸</p>
+
+    <form method="post" class="contact-form">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="اسمكِ" required>
+        <input type="email" name="email" placeholder="بريدكِ الإلكتروني" required>
+        <textarea name="message" placeholder="اكتبي رسالتكِ هنا..." rows="5" required></textarea>
+        <button type="submit">إرسال 💖</button>
+    </form>
+</div>
+{% endblock %}

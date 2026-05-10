@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}نتائج البحث{% endblock %}
+{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_search.css' %}">
+{% endblock %}
+
+
+<div class="search-results-container">
+    <h2 class="section-title">🔍 نتائج البحث عن: "<span style="color:#d63384;">{{ query }}</span>"</h2>
+
+    {% if article_results %}
+        <h3 class="sub-title">📚 المقالات:</h3>
+        <div class="grid">
+            {% for article in article_results %}
+                <div class="card">
+                    <img src="{{ article.image.url }}" alt="صورة المقال" class="card-img">
+                    <h4>{{ article.title }}</h4>
+                    <p>{{ article.content|truncatewords:15 }}</p>
+                    <a href="{% url 'article_detail' article.pk %}" class="read-more">اقرئي المزيد →</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if comment_results %}
+        <h3 class="sub-title">💬 التعليقات:</h3>
+        <div class="comment-list">
+            {% for comment in comment_results %}
+                <div class="comment-box">
+                    <strong>{{ comment.name }}</strong>: {{ comment.body|truncatewords:12 }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if author_results %}
+        <h3 class="sub-title">👩‍💼 الكاتبات:</h3>
+        <ul class="author-list">
+            {% for author in author_results %}
+                <li><a href="{% url 'profile' author.username %}" class="author-link">👤 {{ author.username }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if not article_results and not comment_results and not author_results %}
+        <p class="no-results">😔 لا توجد نتائج لهذا البحث.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

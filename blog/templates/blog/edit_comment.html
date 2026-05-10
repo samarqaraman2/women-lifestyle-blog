@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_edit_comment.css' %}">
+{% endblock %}
+
+{% block title %}تعديل تعليقكِ 📝{% endblock %}
+
+{% block content %}
+<div class="form-centered">
+    <h2>📝 تعديل تعليقكِ</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_body">💬 تعليقكِ:</label>
+            {{ form.body }}
+        </div>
+        <button type="submit" class="btn-primary">حفظ التعديلات</button>
+    </form>
+</div>
+{% endblock %}

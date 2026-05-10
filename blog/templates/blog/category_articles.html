@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/style_category.css' %}">
+{% endblock %}
+
+{% block title %}مقالات {{ category }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>مقالات في تصنيف: {{ category }}</h2>
+    {% for article in articles %}
+        <div class="card">
+            <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+            <p>{{ article.content|truncatewords:20 }}</p>
+        </div>
+    {% empty %}
+        <p>لا توجد مقالات في هذا التصنيف بعد.</p>
+    {% endfor %}
+</div>
+{% endblock %}

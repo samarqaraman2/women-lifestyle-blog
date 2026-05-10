@@ -1,0 +1,87 @@
+/* blog/static/blog/css/style_add_article.css */
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 30px auto 60px auto;
+  background-color: #fff0f5;
+  padding: 25px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(214, 51, 132, 0.15);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+}
+
+.form-wrapper h2 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #a43a88;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select,
+.form-group input[type="file"] {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d49bc8;
+  font-size: 0.9rem;
+  font-family: "Cairo", sans-serif;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.form-group input[type="file"]:focus {
+  border-color: #8c2b6c;
+}
+
+.form-group textarea {
+  min-height: 120px;
+}
+
+.btn-submit {
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-wrapper {
+    padding: 20px;
+    margin: 20px auto 40px auto;
+  }
+
+  .form-wrapper h2 {
+    font-size: 1.3rem;
+  }
+}

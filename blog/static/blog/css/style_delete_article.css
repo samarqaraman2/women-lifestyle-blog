@@ -1,0 +1,76 @@
+/* blog/static/blog/css/style_delete_article.css */
+
+.delete-confirm {
+  max-width: 600px;
+  margin: 60px auto 80px auto;
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.15);
+  font-family: "Cairo", sans-serif;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.delete-confirm h2 {
+  color: #d63384;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.delete-confirm p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #6e4a66;
+  font-weight: 600;
+}
+
+/* أزرار الحذف والرجوع */
+.btn-danger,
+.btn-back {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #a72961;
+}
+
+.btn-back {
+  background-color: #f3f3f3;
+  color: #555;
+}
+
+.btn-back:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .delete-confirm {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .delete-confirm h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn-danger,
+  .btn-back {
+    width: 100%;
+    margin: 8px 0;
+  }
+}

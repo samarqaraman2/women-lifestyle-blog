@@ -1,0 +1,163 @@
+/* === الصفحة الرئيسية === */
+.home-hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe4ec;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #6c5575;
+}
+
+/* زدنا العرض والارتفاع للصورة الرئيسية */
+.hero-image {
+    width: 450px; /* بدل 300px */
+    max-width: 100%;
+    height: auto; /* للحفاظ على النسبة */
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* === أقسام المدونة === */
+.categories-section {
+    text-align: center;
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+.categories-section h2 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* زيادة المسافة */
+}
+
+.category-list span a {
+    display: inline-block;
+    min-width: 120px;
+    white-space: nowrap;
+    background-color: #fce4ec;
+    color: #d63384;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.category-list span a:hover {
+    background-color: #d63384;
+    color: white;
+}
+
+/* === أحدث المقالات === */
+.latest-posts {
+    margin: 60px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.latest-posts h2 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(214, 51, 132, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #d63384;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #6c5575;
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+.card .category-tag {
+    font-size: 0.85rem;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #d63384;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #ad1457;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .home-hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    /* خففنا شوية حجم الصورة للموبايل */
+    .hero-image {
+        width: 100%; /* تاخذ كل العرض */
+        max-width: 400px; /* بس ما تزيد عن 400 */
+        margin-top: 20px;
+        height: auto;
+    }
+}

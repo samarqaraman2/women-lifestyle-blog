@@ -1,0 +1,74 @@
+/* blog/static/blog/css/style_edit_profile.css */
+
+.edit-profile-container {
+  max-width: 500px;
+  margin: 40px auto 70px auto;
+  background-color: #fff0f5;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px rgba(214, 51, 132, 0.15);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.edit-profile-container h2 {
+  color: #d63384;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+form input[type="file"] {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1.5px solid #e5a1ca;
+  font-family: "Cairo", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="file"]:focus {
+  border-color: #c2185b;
+  outline: none;
+}
+
+.btn-save {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+  background-color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .edit-profile-container {
+    padding: 25px 20px;
+    margin: 30px auto 50px auto;
+  }
+
+  .edit-profile-container h2 {
+    font-size: 1.4rem;
+  }
+}

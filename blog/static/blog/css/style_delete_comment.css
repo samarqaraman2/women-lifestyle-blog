@@ -1,0 +1,75 @@
+/* blog/static/blog/css/style_delete_comment.css */
+
+.delete-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+  background-color: #fff0f5;
+  font-family: "Cairo", sans-serif;
+}
+
+.popup-box {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.popup-box h2 {
+  font-size: 1.3rem;
+  color: #c2185b;
+  margin-bottom: 25px;
+}
+
+.confirm-delete {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-delete:hover {
+  background-color: #a72961;
+}
+
+.cancel-delete {
+  color: #555;
+  background-color: #f3f3f3;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-delete:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .popup-box {
+    padding: 20px;
+  }
+
+  .popup-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .confirm-delete,
+  .cancel-delete {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

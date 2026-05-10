@@ -1,0 +1,81 @@
+/* blog/static/blog/css/style_edit_article.css */
+
+.form-container {
+  max-width: 620px;
+  margin: 30px auto 60px auto;
+  background-color: #fff8fc;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(214, 51, 132, 0.1);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #d63384;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* تنسيق الحقول */
+form input[type="text"],
+form input[type="file"],
+form textarea,
+form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #efb3d3;
+  font-size: 0.9rem;
+  font-family: "Cairo", sans-serif;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #c2185b;
+  outline: none;
+}
+
+/* زر الحفظ */
+.btn-primary {
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px auto 50px auto;
+  }
+
+  .form-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+}

@@ -1,0 +1,142 @@
+/* blog/static/blog/css/style_profile.css */
+
+.profile-container {
+  max-width: 700px;
+  margin: 40px auto 60px auto;
+  background-color: #fff0f5;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.15);
+  font-family: "Cairo", sans-serif;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.profile-container h2 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d63384;
+  margin-bottom: 15px;
+}
+
+.bio-text {
+  font-size: 1.1rem;
+  color: #9c216d;
+  margin-bottom: 18px;
+}
+
+.welcome-text {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #6e3a58;
+}
+
+.btn-edit {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #d63384;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #a72961;
+}
+
+/* قسم مقالات الكاتب */
+.author-articles {
+  max-width: 1000px;
+  margin: 50px auto 80px auto;
+  padding: 0 20px;
+}
+
+.author-articles h3 {
+  color: #d63384;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #fff0f5;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  text-align: right;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #a72961;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  min-height: 50px;
+}
+
+.card a {
+  color: #d63384;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #a72961;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 25px 20px;
+    margin: 30px auto 50px auto;
+  }
+
+  .profile-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .author-articles {
+    padding: 0 10px;
+  }
+
+  .author-articles h3 {
+    font-size: 1.3rem;
+  }
+}
